@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -14,76 +15,103 @@ export const Route = createFileRoute("/about")({
 
 function AboutPage() {
   return (
-    <div className="pt-40 pb-20 px-6 lg:px-10">
-      <div className="mx-auto max-w-5xl">
-        <div className="animate-float-up">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">About Us</span>
-          <h1 className="mt-6 font-serif text-6xl md:text-8xl leading-[0.95]">
-            Building brands <span className="italic gradient-gold-text">that last.</span>
-          </h1>
+    <div className="bg-cream">
+      {/* HERO */}
+      <section className="relative pt-40 pb-20 px-6 lg:px-10 text-center">
+        <div className="animate-float-up-soft">
+          <span className="text-[10px] uppercase tracking-[0.35em] text-gold">About</span>
         </div>
+        <h1 className="mt-6 font-serif font-medium text-navy leading-[0.88] tracking-[-0.03em] text-[16vw] sm:text-[13vw] md:text-[11rem] animate-float-up">
+          The <span className="italic gradient-gold-text">Group.</span>
+        </h1>
+        <p className="mt-8 mx-auto max-w-xl text-navy/65 leading-relaxed animate-float-up-soft" style={{ animationDelay: "0.3s" }}>
+          Khomba Group of Companies is a portfolio of distinguished brands —
+          built on the simple belief that excellence is a discipline.
+        </p>
+      </section>
 
-        <div className="mt-20 grid gap-16 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <div className="text-xs uppercase tracking-[0.3em] text-gold">Our Story</div>
+      {/* STORY */}
+      <section className="px-6 lg:px-10 py-24">
+        <div className="mx-auto max-w-6xl grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <div className="text-[10px] uppercase tracking-[0.35em] text-gold sticky top-28">Our Story</div>
           </div>
-          <div className="md:col-span-7 space-y-6 text-lg leading-relaxed text-foreground/90">
+          <div className="md:col-span-8 space-y-6 text-xl leading-relaxed text-navy/85 font-serif">
             <p>
-              Khomba Group of Companies is a portfolio of distinguished
-              businesses — built on the simple belief that excellence is
-              a discipline, not an accident.
-            </p>
-            <p className="text-muted-foreground">
               We invest in, grow, and operate brands across beauty, security,
-              and a growing range of sectors. Each company under the Khomba
-              banner shares one philosophy: do meaningful work, treat people
-              with respect, and never compromise on quality.
+              and a growing range of sectors.
+            </p>
+            <p className="text-navy/55">
+              Each company under the Khomba banner shares one philosophy:
+              do meaningful work, treat people with respect, and never
+              compromise on quality.
             </p>
           </div>
         </div>
+      </section>
 
-        <div className="mt-32 grid gap-16 md:grid-cols-12 border-t border-border pt-20">
-          <div className="md:col-span-5">
-            <div className="text-xs uppercase tracking-[0.3em] text-gold">Our Vision</div>
+      {/* VISION — dark navy band */}
+      <section className="relative bg-navy text-cream py-32 px-6 lg:px-10 overflow-hidden">
+        <div
+          aria-hidden
+          className="absolute inset-0 opacity-30"
+          style={{
+            background:
+              "radial-gradient(60% 50% at 30% 30%, oklch(0.72 0.14 75 / 0.25), transparent 70%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-6xl grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <div className="text-[10px] uppercase tracking-[0.35em] text-gold">Our Vision</div>
           </div>
-          <div className="md:col-span-7">
-            <p className="font-serif text-3xl md:text-4xl leading-snug">
-              To be a name synonymous with <span className="italic gradient-gold-text">trust and craft</span> — across every industry we touch.
+          <div className="md:col-span-8">
+            <p className="font-serif text-4xl md:text-6xl leading-[1.05] text-cream">
+              To be a name synonymous with <span className="italic text-gold">trust and craft</span> — across every industry we touch.
             </p>
           </div>
         </div>
+      </section>
 
-        <div className="mt-32 grid gap-16 md:grid-cols-12 border-t border-border pt-20">
-          <div className="md:col-span-5">
-            <div className="text-xs uppercase tracking-[0.3em] text-gold">What We Stand For</div>
-          </div>
-          <div className="md:col-span-7 grid sm:grid-cols-2 gap-10">
+      {/* VALUES */}
+      <section className="px-6 lg:px-10 py-32">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-[10px] uppercase tracking-[0.35em] text-gold">What We Stand For</div>
+          <h2 className="mt-5 font-serif text-5xl md:text-7xl text-navy leading-[1]">
+            Four words. <span className="italic gradient-gold-text">Every decision.</span>
+          </h2>
+
+          <div className="mt-20 grid gap-12 sm:grid-cols-2 md:grid-cols-4">
             {[
               { t: "Excellence", d: "Quality is the price of entry." },
               { t: "Integrity", d: "Do the right thing, even when no one is watching." },
               { t: "Service", d: "Customers are partners, not transactions." },
               { t: "Legacy", d: "Build today what stands tomorrow." },
-            ].map((v) => (
-              <div key={v.t}>
-                <div className="font-serif text-2xl text-gold">{v.t}</div>
-                <p className="mt-2 text-sm text-muted-foreground">{v.d}</p>
+            ].map((v, i) => (
+              <div key={v.t} className="border-t border-navy/15 pt-6">
+                <div className="text-gold text-xs tracking-[0.3em]">0{i + 1}</div>
+                <div className="mt-3 font-serif text-3xl text-navy">{v.t}</div>
+                <p className="mt-3 text-sm text-navy/60 leading-relaxed">{v.d}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="mt-40 text-center border-t border-border pt-20">
-          <h2 className="font-serif text-5xl md:text-6xl">
-            Let's <span className="italic gradient-gold-text">build something</span>.
+      {/* CTA */}
+      <section className="px-6 lg:px-10 pb-32">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-serif text-5xl md:text-7xl text-navy leading-[1]">
+            Let's <span className="italic gradient-gold-text">build something.</span>
           </h2>
           <a
             href="mailto:hello@khombagroup.com"
-            className="mt-10 inline-flex items-center gap-2 bg-gold text-primary-foreground px-8 py-4 rounded-full text-sm tracking-wide hover:gap-3 transition-all"
+            className="mt-10 inline-flex items-center gap-2 bg-navy text-cream px-8 py-4 rounded-full text-sm tracking-wide hover:bg-navy-deep transition-all group"
           >
             hello@khombagroup.com
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
           </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

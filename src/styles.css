@@ -8,7 +8,6 @@
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -30,36 +29,50 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
+  --color-cream: var(--cream);
   --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  /* Navy / Gold palette inspired by KGC logo */
-  --navy-deep: oklch(0.18 0.05 265);
-  --background: oklch(0.13 0.04 265);
-  --foreground: oklch(0.96 0.01 90);
-  --card: oklch(0.18 0.05 265);
-  --card-foreground: oklch(0.96 0.01 90);
-  --popover: oklch(0.18 0.05 265);
-  --popover-foreground: oklch(0.96 0.01 90);
-  --primary: oklch(0.78 0.13 78); /* gold */
-  --primary-foreground: oklch(0.15 0.05 265);
-  --secondary: oklch(0.24 0.05 265);
-  --secondary-foreground: oklch(0.96 0.01 90);
-  --muted: oklch(0.22 0.04 265);
-  --muted-foreground: oklch(0.7 0.02 80);
-  --accent: oklch(0.78 0.13 78);
-  --accent-foreground: oklch(0.15 0.05 265);
+
+  /* Light, premium palette inspired by KGC navy + gold on cream */
+  --cream: oklch(0.985 0.008 85);
+  --navy: oklch(0.22 0.07 265);
+  --navy-deep: oklch(0.16 0.06 265);
+  --gold: oklch(0.72 0.14 75);
+  --gold-soft: oklch(0.82 0.11 82);
+
+  --background: oklch(0.985 0.008 85); /* warm off-white */
+  --foreground: oklch(0.18 0.06 265); /* deep navy ink */
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.22 0.07 265); /* navy */
+  --primary-foreground: oklch(0.985 0.008 85);
+
+  --secondary: oklch(0.95 0.012 85);
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.94 0.012 85);
+  --muted-foreground: oklch(0.45 0.04 265);
+
+  --accent: var(--gold);
+  --accent-foreground: var(--navy);
+
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.3 0.04 265 / 60%);
-  --input: oklch(0.3 0.04 265);
-  --ring: oklch(0.78 0.13 78);
-  --gold: oklch(0.78 0.13 78);
-  --gold-soft: oklch(0.86 0.1 85);
+
+  --border: oklch(0.88 0.015 85);
+  --input: oklch(0.9 0.012 85);
+  --ring: var(--gold);
 }
 
 @layer base {
@@ -73,7 +86,6 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4 {
@@ -81,35 +93,65 @@
     font-weight: 500;
     letter-spacing: -0.02em;
   }
+  ::selection {
+    background-color: var(--gold);
+    color: var(--navy);
+  }
 }
 
-@utility text-gold {
-  color: var(--gold);
-}
-@utility bg-gold {
-  background-color: var(--gold);
-}
+@utility text-gold { color: var(--gold); }
+@utility text-navy { color: var(--navy); }
+@utility bg-gold { background-color: var(--gold); }
+@utility bg-navy { background-color: var(--navy); }
+@utility border-gold { border-color: var(--gold); }
+
 @utility gradient-gold-text {
-  background: linear-gradient(135deg, var(--gold-soft) 0%, var(--gold) 50%, oklch(0.6 0.13 70) 100%);
+  background: linear-gradient(135deg, var(--gold) 0%, oklch(0.6 0.13 70) 50%, var(--gold) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-@utility radial-vignette {
-  background: radial-gradient(ellipse at center, transparent 0%, var(--background) 80%);
+@utility gradient-navy-text {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 @keyframes float-up {
   from { opacity: 0; transform: translateY(40px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+@keyframes float-up-soft {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 @keyframes shimmer {
-  0%, 100% { opacity: 0.6; }
+  0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
-@utility animate-float-up {
-  animation: float-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+@keyframes mask-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
-@utility animate-shimmer {
-  animation: shimmer 3s ease-in-out infinite;
+@keyframes bg-pan {
+  from { background-position: 0% 50%; }
+  to   { background-position: 100% 50%; }
+}
+
+@utility animate-float-up { animation: float-up 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@utility animate-float-up-soft { animation: float-up-soft 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@utility animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
+@utility animate-mask-reveal { animation: mask-reveal 1.4s cubic-bezier(0.77, 0, 0.175, 1) both; }
+@utility animate-bg-pan {
+  background-size: 200% 200%;
+  animation: bg-pan 8s ease-in-out infinite alternate;
+}
+
+@utility hero-grain {
+  position: relative;
+}
+@utility noise-overlay {
+  background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 3px 3px;
 }
