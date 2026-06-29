@@ -23,7 +23,7 @@ export function SiteHeader() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border"
+          ? "bg-background/85 backdrop-blur-xl border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -32,19 +32,14 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="Khomba Group of Companies"
-            className="h-11 w-11 rounded-full object-cover ring-1 ring-gold/40 group-hover:ring-gold transition-all"
+            className="h-10 w-10 rounded-full object-cover ring-1 ring-navy/15 group-hover:ring-gold transition-all"
           />
-          <span className="hidden sm:flex flex-col leading-none">
-            <span className="font-serif text-xl tracking-wide text-foreground">
-              Khomba<span className="text-gold">.</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground mt-1">
-              Group of Companies
-            </span>
+          <span className="hidden sm:block font-serif text-xl text-navy tracking-tight">
+            Khomba<span className="text-gold">.</span>
           </span>
         </Link>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex items-center gap-1">
           {nav.map((n) => {
             const active = pathname === n.to;
             return (
@@ -52,12 +47,12 @@ export function SiteHeader() {
                 key={n.to}
                 to={n.to}
                 className={`relative px-4 py-2 text-sm tracking-wide transition-colors ${
-                  active ? "text-gold" : "text-foreground/80 hover:text-foreground"
+                  active ? "text-navy" : "text-foreground/60 hover:text-navy"
                 }`}
               >
                 {n.label}
                 <span
-                  className={`absolute left-4 right-4 bottom-1 h-px bg-gold transition-transform origin-left ${
+                  className={`absolute left-4 right-4 -bottom-0.5 h-px bg-gold transition-transform origin-left duration-500 ${
                     active ? "scale-x-100" : "scale-x-0"
                   }`}
                 />
@@ -72,42 +67,40 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="relative mt-32 border-t border-border">
-      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid gap-12 md:grid-cols-3">
-        <div>
+    <footer className="relative mt-32 bg-navy text-cream">
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 py-20 grid gap-14 md:grid-cols-12">
+        <div className="md:col-span-5">
           <div className="flex items-center gap-3">
             <img src={logo} alt="KGC" className="h-12 w-12 rounded-full object-cover ring-1 ring-gold/40" />
             <div className="leading-tight">
-              <div className="font-serif text-xl">Khomba<span className="text-gold">.</span></div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Group of Companies</div>
+              <div className="font-serif text-2xl">Khomba<span className="text-gold">.</span></div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60">Group of Companies</div>
             </div>
           </div>
-          <p className="mt-6 text-sm text-muted-foreground max-w-sm">
-            A portfolio of brands built on excellence, trust, and craft.
+          <p className="mt-6 text-sm text-cream/70 max-w-sm leading-relaxed">
+            A portfolio of distinguished brands built on craft, integrity, and a relentless standard of quality.
           </p>
         </div>
-        <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-gold mb-4">Explore</div>
-          <ul className="space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-gold transition-colors">Home</Link></li>
-            <li><Link to="/work" className="hover:text-gold transition-colors">Our Companies</Link></li>
-            <li><Link to="/about" className="hover:text-gold transition-colors">About</Link></li>
+        <div className="md:col-span-3">
+          <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Explore</div>
+          <ul className="space-y-3 text-sm">
+            <li><Link to="/" className="text-cream/80 hover:text-gold transition-colors">Home</Link></li>
+            <li><Link to="/work" className="text-cream/80 hover:text-gold transition-colors">Our Companies</Link></li>
+            <li><Link to="/about" className="text-cream/80 hover:text-gold transition-colors">About</Link></li>
           </ul>
         </div>
-        <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-gold mb-4">Contact</div>
-          <p className="text-sm text-muted-foreground">
-            For partnerships and inquiries.<br />
-            <a href="mailto:hello@khombagroup.com" className="text-foreground hover:text-gold transition-colors">
-              hello@khombagroup.com
-            </a>
-          </p>
+        <div className="md:col-span-4">
+          <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Get in touch</div>
+          <a href="mailto:hello@khombagroup.com" className="text-lg text-cream hover:text-gold transition-colors">
+            hello@khombagroup.com
+          </a>
+          <p className="mt-3 text-sm text-cream/60">For partnerships and inquiries.</p>
         </div>
       </div>
-      <div className="border-t border-border">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
+      <div className="border-t border-cream/10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-cream/50">
           <span>© {new Date().getFullYear()} Khomba Group of Companies. All rights reserved.</span>
-          <span className="tracking-[0.2em] uppercase">Crafted with care</span>
+          <span className="tracking-[0.25em] uppercase">Crafted with care</span>
         </div>
       </div>
     </footer>

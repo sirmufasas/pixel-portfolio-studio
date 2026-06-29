@@ -38,20 +38,24 @@ const companies = [
 
 function WorkPage() {
   return (
-    <div className="pt-40 pb-20 px-6 lg:px-10">
-      <div className="mx-auto max-w-7xl">
-        <div className="max-w-4xl animate-float-up">
-          <span className="text-xs uppercase tracking-[0.3em] text-gold">Selected Work</span>
-          <h1 className="mt-6 font-serif text-6xl md:text-8xl leading-[0.95]">
-            Our <span className="italic gradient-gold-text">Companies</span>.
-          </h1>
-          <p className="mt-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-            Each brand under the Khomba Group is built with the same standard
-            of care. Click any tile to visit the company website.
-          </p>
+    <div className="bg-cream">
+      {/* Hero header */}
+      <section className="relative pt-40 pb-20 px-6 lg:px-10 text-center">
+        <div className="animate-float-up-soft">
+          <span className="text-[10px] uppercase tracking-[0.35em] text-gold">Selected Work</span>
         </div>
+        <h1 className="mt-6 font-serif font-medium text-navy leading-[0.9] tracking-[-0.03em] text-[18vw] sm:text-[14vw] md:text-[12rem] animate-float-up">
+          Our <span className="italic gradient-gold-text">Work.</span>
+        </h1>
+        <p className="mt-8 mx-auto max-w-xl text-navy/65 leading-relaxed animate-float-up-soft" style={{ animationDelay: "0.3s" }}>
+          Each brand under the Khomba Group is crafted with the same standard
+          of care. Click any company to visit their site.
+        </p>
+      </section>
 
-        <div className="mt-24 space-y-32">
+      {/* Work list */}
+      <section className="px-6 lg:px-10 pb-20">
+        <div className="mx-auto max-w-7xl space-y-32 md:space-y-44">
           {companies.map((c, i) => (
             <a
               key={c.name}
@@ -62,25 +66,26 @@ function WorkPage() {
                 i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
               }`}
             >
-              <div className="lg:col-span-7 relative overflow-hidden rounded-2xl border border-border bg-card aspect-[16/10]">
+              <div className="lg:col-span-7 relative overflow-hidden rounded-2xl bg-white shadow-[0_40px_100px_-40px_rgba(20,30,80,0.3)] aspect-[16/10]">
                 <img
                   src={c.img}
                   alt={c.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-6 right-6 h-12 w-12 rounded-full border border-gold/50 flex items-center justify-center text-gold backdrop-blur-sm bg-background/30 group-hover:bg-gold group-hover:text-primary-foreground transition-all">
+                <div className="absolute top-6 left-6 text-[10px] tracking-[0.3em] text-cream bg-navy/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
+                  {c.n} — {c.tag}
+                </div>
+                <div className="absolute top-6 right-6 h-12 w-12 rounded-full bg-cream/90 backdrop-blur flex items-center justify-center text-navy group-hover:bg-gold transition-all">
                   <ArrowUpRight className="h-5 w-5 transition-transform group-hover:rotate-45" />
                 </div>
               </div>
               <div className="lg:col-span-5">
-                <div className="text-xs tracking-[0.3em] text-gold">{c.n} — {c.tag}</div>
-                <h2 className="mt-4 font-serif text-5xl md:text-6xl group-hover:text-gold transition-colors">
+                <h2 className="font-serif text-5xl md:text-7xl text-navy group-hover:text-gold transition-colors leading-[0.95]">
                   {c.name}
                 </h2>
-                <p className="mt-6 text-muted-foreground leading-relaxed">{c.blurb}</p>
-                <div className="mt-8 inline-flex items-center gap-2 text-sm text-foreground group-hover:text-gold transition-colors">
+                <p className="mt-6 text-navy/65 leading-relaxed max-w-md">{c.blurb}</p>
+                <div className="mt-8 inline-flex items-center gap-2 text-sm text-navy group-hover:text-gold transition-colors">
                   Visit website
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
                 </div>
@@ -89,13 +94,13 @@ function WorkPage() {
           ))}
         </div>
 
-        <div className="mt-40 border-t border-border pt-16 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">More to come</p>
-          <h3 className="mt-4 font-serif text-4xl md:text-5xl">
+        <div className="mt-40 max-w-2xl mx-auto text-center">
+          <p className="text-[10px] uppercase tracking-[0.35em] text-gold">More to come</p>
+          <h3 className="mt-4 font-serif text-4xl md:text-6xl text-navy leading-tight">
             New ventures, <span className="italic gradient-gold-text">always in motion.</span>
           </h3>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
