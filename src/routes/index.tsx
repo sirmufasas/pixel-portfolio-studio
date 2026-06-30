@@ -69,11 +69,18 @@ function HomePage() {
             <h1 className="font-serif font-medium leading-[0.85] tracking-[-0.04em] text-navy text-[22vw] sm:text-[18vw] md:text-[16vw] lg:text-[14rem] xl:text-[17rem] animate-float-up">
               Khomba<span className="text-gold">.</span>
             </h1>
-            <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-base sm:text-lg text-navy/65 leading-relaxed animate-float-up-soft" style={{ animationDelay: "0.3s" }}>
-              A portfolio of distinguished brands — built on craft, integrity,
-              and a relentless standard of <span className="italic text-navy">excellence</span>.
+            <div className="mt-4 flex items-center justify-center gap-4 animate-float-up-soft" style={{ animationDelay: "0.2s" }}>
+              <span className="h-px w-16 bg-gold/60" />
+              <span className="text-[11px] sm:text-sm uppercase tracking-[0.5em] text-navy/75 font-medium">
+                Group of Companies
+              </span>
+              <span className="h-px w-16 bg-gold/60" />
+            </div>
+            <p className="mt-8 max-w-2xl mx-auto text-base sm:text-lg text-navy/70 leading-relaxed animate-float-up-soft font-serif italic" style={{ animationDelay: "0.4s" }}>
+              A family legacy of distinguished houses — bound by name,
+              built on honour, and carried forward with pride.
             </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-3 animate-float-up-soft" style={{ animationDelay: "0.5s" }}>
+            <div className="mt-10 flex flex-wrap justify-center gap-3 animate-float-up-soft" style={{ animationDelay: "0.6s" }}>
               <Link
                 to="/work"
                 className="group inline-flex items-center gap-2 bg-navy text-cream px-7 py-4 rounded-full text-sm tracking-wide hover:bg-navy-deep transition-all"
@@ -83,9 +90,9 @@ function HomePage() {
               </Link>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 border border-navy/20 text-navy px-7 py-4 rounded-full text-sm tracking-wide hover:border-gold hover:text-gold transition-colors"
+                className="inline-flex items-center gap-2 border border-navy/25 text-navy px-7 py-4 rounded-full text-sm tracking-wide hover:border-gold hover:text-gold transition-colors"
               >
-                Our Story
+                Our Legacy
               </Link>
             </div>
           </div>
@@ -95,6 +102,7 @@ function HomePage() {
           <MousePointer2 className="h-3 w-3" /> Scroll
         </div>
       </section>
+
 
       {/* SECTION DIVIDER */}
       <section className="bg-cream py-20 border-t border-border">
@@ -139,9 +147,10 @@ function HomePage() {
                   src={c.img}
                   alt={c.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
+                  className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
                 <div className="absolute top-6 left-6 text-[10px] tracking-[0.3em] text-cream bg-navy/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
                   {c.n} — {c.tag}
                 </div>

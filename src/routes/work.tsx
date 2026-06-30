@@ -71,8 +71,9 @@ function WorkPage() {
                   src={c.img}
                   alt={c.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                  className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
                 />
+
                 <div className="absolute top-6 left-6 text-[10px] tracking-[0.3em] text-cream bg-navy/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
                   {c.n} — {c.tag}
                 </div>
