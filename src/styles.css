@@ -40,29 +40,31 @@
 :root {
   --radius: 0.5rem;
 
-  /* Light, premium palette inspired by KGC navy + gold on cream */
-  --cream: oklch(0.985 0.008 85);
+  /* Warm-stone palette: not too bright, navy + gold accents */
+  --cream: oklch(0.93 0.008 85);        /* warm light stone (was 0.985) */
+  --cream-soft: oklch(0.955 0.008 85);
+  --stone: oklch(0.88 0.008 85);
   --navy: oklch(0.22 0.07 265);
-  --navy-deep: oklch(0.16 0.06 265);
+  --navy-deep: oklch(0.14 0.06 265);
   --gold: oklch(0.72 0.14 75);
   --gold-soft: oklch(0.82 0.11 82);
 
-  --background: oklch(0.985 0.008 85); /* warm off-white */
-  --foreground: oklch(0.18 0.06 265); /* deep navy ink */
+  --background: oklch(0.93 0.008 85);   /* warm stone */
+  --foreground: oklch(0.18 0.06 265);
 
-  --card: oklch(1 0 0);
+  --card: oklch(0.96 0.006 85);
   --card-foreground: var(--foreground);
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  --primary: oklch(0.22 0.07 265); /* navy */
-  --primary-foreground: oklch(0.985 0.008 85);
+  --primary: oklch(0.22 0.07 265);
+  --primary-foreground: oklch(0.95 0.008 85);
 
-  --secondary: oklch(0.95 0.012 85);
+  --secondary: oklch(0.89 0.01 85);
   --secondary-foreground: var(--foreground);
 
-  --muted: oklch(0.94 0.012 85);
-  --muted-foreground: oklch(0.45 0.04 265);
+  --muted: oklch(0.87 0.01 85);
+  --muted-foreground: oklch(0.42 0.04 265);
 
   --accent: var(--gold);
   --accent-foreground: var(--navy);
@@ -70,10 +72,11 @@
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.98 0 0);
 
-  --border: oklch(0.88 0.015 85);
-  --input: oklch(0.9 0.012 85);
+  --border: oklch(0.82 0.012 85);
+  --input: oklch(0.86 0.012 85);
   --ring: var(--gold);
 }
+
 
 @layer base {
   * {
@@ -103,7 +106,30 @@
 @utility text-navy { color: var(--navy); }
 @utility bg-gold { background-color: var(--gold); }
 @utility bg-navy { background-color: var(--navy); }
+@utility bg-cream-soft { background-color: var(--cream-soft); }
+@utility bg-stone { background-color: var(--stone); }
 @utility border-gold { border-color: var(--gold); }
+
+@keyframes gold-sweep {
+  0%   { transform: translateX(-30%) rotate(18deg); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateX(420%) rotate(18deg); opacity: 0; }
+}
+.gold-sweep {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(0.85 0.13 80 / 0.0) 10%,
+    oklch(0.92 0.14 82 / 0.55) 45%,
+    oklch(0.98 0.08 90 / 0.85) 50%,
+    oklch(0.92 0.14 82 / 0.55) 55%,
+    transparent 90%
+  );
+  filter: blur(6px);
+  animation: gold-sweep 1.8s cubic-bezier(0.6, 0, 0.4, 1) both;
+}
+
 
 @utility gradient-gold-text {
   background: linear-gradient(135deg, var(--gold) 0%, oklch(0.6 0.13 70) 50%, var(--gold) 100%);
