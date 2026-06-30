@@ -108,18 +108,19 @@ function HomePage() {
       <section className="bg-cream py-20 border-t border-border">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 grid gap-12 md:grid-cols-12 items-end">
           <div className="md:col-span-7">
-            <span className="text-[10px] uppercase tracking-[0.35em] text-gold">Selected Work</span>
+            <span className="text-[10px] uppercase tracking-[0.35em] text-gold">The Houses</span>
             <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[0.95] text-navy">
-              Companies <span className="italic">crafted</span>
-              <br /> with <span className="gradient-gold-text">intention.</span>
+              A family of brands,
+              <br /> bound by <span className="italic gradient-gold-text">one name.</span>
             </h2>
           </div>
           <div className="md:col-span-5 md:pl-10">
-            <p className="text-navy/65 leading-relaxed">
-              Each brand under the Khomba Group is built to last — combining
-              clear values with serious execution. Click any tile to visit
-              the company.
+            <p className="text-navy/70 leading-relaxed">
+              Every house under the Khomba Group carries the family standard —
+              built with patience, run with honour, and answerable to the name
+              above the door.
             </p>
+
             <Link
               to="/work"
               className="mt-6 inline-flex items-center gap-2 text-sm text-navy hover:text-gold transition-colors group"
