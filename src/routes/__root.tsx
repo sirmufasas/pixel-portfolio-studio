@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SiteHeader, SiteFooter } from "../components/SiteChrome";
+import { SiteHeader, SiteFooter, WhatsAppFab } from "../components/SiteChrome";
 import { BrandLoader } from "../components/BrandLoader";
 
 function NotFoundComponent() {
@@ -126,6 +126,7 @@ function RootComponent() {
       <main className="min-h-screen">
         <Outlet />
       </main>
+      <WhatsAppFab />
       <SiteFooter />
     </QueryClientProvider>
   );
