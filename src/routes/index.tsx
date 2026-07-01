@@ -215,13 +215,13 @@ function HomePage() {
           <h2 className="mt-5 font-serif text-5xl md:text-7xl text-navy leading-[1]">
             Partner with a group that <span className="italic gradient-gold-text">builds to last.</span>
           </h2>
-          <a
-            href="mailto:hello@khombagroup.com"
+          <Link
+            to="/contact"
             className="mt-10 inline-flex items-center gap-2 bg-navy text-cream px-8 py-4 rounded-full text-sm tracking-wide hover:bg-navy-deep transition-all group"
           >
-            hello@khombagroup.com
+            Get in touch
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
