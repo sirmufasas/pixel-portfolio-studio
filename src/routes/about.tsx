@@ -50,7 +50,7 @@ function AboutPage() {
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 text-cream">
                   <div className="text-[10px] tracking-[0.35em] uppercase text-gold">Founder &amp; CEO</div>
-                  <div className="mt-1 font-serif text-2xl sm:text-3xl">The Head of the House</div>
+                  <div className="mt-1 font-serif text-2xl sm:text-3xl">Mr Benjamin Khomba</div>
                 </div>
               </div>
             </div>
