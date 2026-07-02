@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import kimsImg from "@/assets/work-kimsglamlab.png";
-import safeguardImg from "@/assets/work-safeguard.png";
+import kimsImg from "@/assets/work-kimsglamlab-new.jpeg";
+import safeguardImg from "@/assets/work-safeguard-new.jpeg";
+import kgcShuttlesImg from "@/assets/work-kgcshuttles.png";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -29,6 +30,13 @@ const companies = [
     url: "https://safeguardsecuritysolutions.netlify.app/",
     image_url: safeguardImg,
     blurb: "Guarding what matters most. Professional security you can trust.",
+  },
+  {
+    name: "KGC Shuttles",
+    tag: "Transport & Logistics",
+    url: "https://kgcshuttles.netlify.app/",
+    image_url: kgcShuttlesImg,
+    blurb: "Comfort. Reliability. Destination. Premium shuttle transport you can count on.",
   },
 ];
 
