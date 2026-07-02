@@ -73,7 +73,7 @@ function WorkPage() {
                   src={c.image_url}
                   alt={c.name}
                   loading="lazy"
-                  className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
+                  className="h-full w-full object-contain p-8 sm:p-12 transition-transform duration-[1.4s] ease-out group-hover:scale-[1.05]"
                 />
                 <div className="absolute top-4 left-4 sm:top-6 sm:left-6 text-[10px] tracking-[0.3em] text-cream bg-navy/70 backdrop-blur-sm px-3 py-1.5 rounded-full">
                   {String(i + 1).padStart(2, "0")} — {c.tag}

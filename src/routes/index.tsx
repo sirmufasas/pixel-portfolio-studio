@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, MousePointer2 } from "lucide-react";
 import heroImg from "@/assets/hero-main.jpg";
-import kimsImg from "@/assets/work-kimsglamlab.png";
-import safeguardImg from "@/assets/work-safeguard.png";
+import kimsImg from "@/assets/work-kimsglamlab-new.jpeg";
+import safeguardImg from "@/assets/work-safeguard-new.jpeg";
+import kgcShuttlesImg from "@/assets/work-kgcshuttles.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,6 +33,14 @@ const companies = [
     img: safeguardImg,
     url: "https://safeguardsecuritysolutions.netlify.app/",
     blurb: "Guarding what matters most. Professional security you can trust.",
+  },
+  {
+    n: "03",
+    name: "KGC Shuttles",
+    tag: "Transport & Logistics",
+    img: kgcShuttlesImg,
+    url: "https://kgcshuttles.netlify.app/",
+    blurb: "Comfort. Reliability. Destination. Premium shuttle transport you can count on.",
   },
 ];
 
@@ -134,21 +143,21 @@ function HomePage() {
 
       {/* FEATURED COMPANIES */}
       <section className="bg-cream pb-32 px-6 lg:px-10">
-        <div className="mx-auto max-w-7xl grid gap-10 md:grid-cols-2">
-          {companies.map((c, i) => (
+        <div className="mx-auto max-w-7xl grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          {companies.map((c) => (
             <a
               key={c.name}
               href={c.url}
               target="_blank"
               rel="noreferrer"
-              className={`group block ${i === 1 ? "md:mt-24" : ""}`}
+              className="group block"
             >
               <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_30px_80px_-30px_rgba(20,30,80,0.25)] aspect-[4/3]">
                 <img
                   src={c.img}
                   alt={c.name}
                   loading="lazy"
-                  className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
+                  className="h-full w-full object-contain p-8 transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
