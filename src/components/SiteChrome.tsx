@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/kgc-logo.jpeg";
 
-const WHATSAPP_NUMBER = "27000000000"; // TODO: replace with real number
+const WHATSAPP_NUMBER = "271794085";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -158,8 +158,8 @@ export function SiteFooter() {
         </div>
         <div className="md:col-span-4">
           <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Get in touch</div>
-          <a href="mailto:hello@khombagroup.com" className="text-lg text-cream hover:text-gold transition-colors break-all">
-            hello@khombagroup.com
+          <a href="mailto:khombagroupofcompanies@gmail.com" className="text-lg text-cream hover:text-gold transition-colors break-all">
+            khombagroupofcompanies@gmail.com
           </a>
           <p className="mt-3 text-sm text-cream/60">For partnerships and inquiries.</p>
         </div>
