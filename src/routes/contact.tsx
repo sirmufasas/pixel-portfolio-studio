@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MessageCircle, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "27000000000"; // TODO: replace with real number (country code + number, no +)
-const EMAIL = "hello@khombagroup.com";
-const PHONE_DISPLAY = "+27 00 000 0000";
+const WHATSAPP_NUMBER = "271794085";
+const EMAIL = "khombagroupofcompanies@gmail.com";
+const PHONE_DISPLAY = "+27 179 4085";
 const LOCATION = "South Africa";
 
 export const Route = createFileRoute("/contact")({
