@@ -3,7 +3,7 @@ import { ArrowUpRight, MousePointer2 } from "lucide-react";
 import heroImg from "@/assets/hero-main.jpg";
 import kimsImg from "@/assets/work-kimsglamlab-new.jpeg";
 import safeguardImg from "@/assets/work-safeguard-new.jpeg";
-import kgcShuttlesImg from "@/assets/work-kgcshuttles.png";
+import kgcShuttlesImg from "@/assets/work-kgcshuttles.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import kimsImg from "@/assets/work-kimsglamlab-new.jpeg";
 import safeguardImg from "@/assets/work-safeguard-new.jpeg";
-import kgcShuttlesImg from "@/assets/work-kgcshuttles.png";
+import kgcShuttlesImg from "@/assets/work-kgcshuttles.webp";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
