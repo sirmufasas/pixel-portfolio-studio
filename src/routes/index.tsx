@@ -65,7 +65,7 @@ function HomePage() {
         <div className="relative z-10 pt-24 sm:pt-32 text-center animate-float-up-soft">
           <span className="inline-flex items-center gap-2 sm:gap-3 text-[9px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.35em] text-navy/60">
             <span className="h-px w-6 sm:w-10 bg-gold" />
-            Est. Khomba Group
+            Est.2026
             <span className="h-px w-6 sm:w-10 bg-gold" />
           </span>
         </div>
