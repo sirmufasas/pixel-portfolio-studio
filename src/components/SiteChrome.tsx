@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/kgc-logo.jpeg";
 
-const WHATSAPP_NUMBER = "271794085";
+const WHATSAPP_NUMBER = "+27 73 179 4085";
 
 const nav = [
   { to: "/", label: "Home" },
