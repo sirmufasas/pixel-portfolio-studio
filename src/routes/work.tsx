@@ -18,11 +18,11 @@ export const Route = createFileRoute("/work")({
 
 const companies = [
   {
-    name: "Kim's Glam Lab",
-    tag: "Beauty & Cosmetics",
-    url: "https://kimsglamlab.netlify.app/",
-    image_url: kimsImg,
-    blurb: "Elevate your glow. A boutique beauty brand crafting confidence.",
+    name: "KGC Shuttles",
+    tag: "Transport & Logistics",
+    url: "https://kgcshuttles.netlify.app/",
+    image_url: kgcShuttlesImg,
+    blurb: "Comfort. Reliability. Destination. Premium shuttle transport you can count on.",
   },
   {
     name: "Safeguard Security",
@@ -32,12 +32,12 @@ const companies = [
     blurb: "Guarding what matters most. Professional security you can trust.",
   },
   {
-    name: "KGC Shuttles",
-    tag: "Transport & Logistics",
-    url: "https://kgcshuttles.netlify.app/",
-    image_url: kgcShuttlesImg,
-    blurb: "Comfort. Reliability. Destination. Premium shuttle transport you can count on.",
-  },
+    name: "Kim's Glam Lab",
+    tag: "Beauty & Cosmetics",
+    url: "https://kimsglamlab.netlify.app/",
+    image_url: kimsImg,
+    blurb: "Elevate your glow. A boutique beauty brand crafting confidence.",
+  }
 ];
 
 function WorkPage() {

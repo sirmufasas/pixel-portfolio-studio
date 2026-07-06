@@ -19,7 +19,7 @@ export function BrandLoader() {
   return (
     <div
       aria-hidden
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-cream transition-opacity duration-[600ms] ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-white transition-opacity duration-[600ms] ${
         fade ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >

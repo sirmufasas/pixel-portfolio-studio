@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import founderAsset from "@/assets/founder.jpg.asset.json";
+import founderAsset from "@/assets/founder.jpeg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -9,8 +9,7 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "The story, vision, and principles behind the Khomba Group of Companies." },
       { property: "og:title", content: "About — Khomba Group" },
       { property: "og:description", content: "Built on craft, integrity, and a relentless standard of quality." },
-      { property: "og:image", content: founderAsset.url },
-    ],
+      { property: "og:image", content: founderAsset },],
   }),
   component: AboutPage,
 });
@@ -43,7 +42,7 @@ function AboutPage() {
               />
               <div className="relative overflow-hidden rounded-3xl aspect-[4/5] bg-stone shadow-[0_40px_100px_-40px_rgba(20,30,80,0.4)]">
                 <img
-                  src={founderAsset.url}
+                  src={founderAsset}
                   alt="Founder & CEO of Khomba Group of Companies"
                   className="h-full w-full object-cover object-center transition-transform duration-[2s] ease-out group-hover:scale-[1.04]"
                 />
