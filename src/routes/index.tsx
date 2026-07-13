@@ -4,13 +4,14 @@ import heroImg from "@/assets/hero-main.jpg";
 import kimsImg from "@/assets/work-kimsglamlab-new.jpeg";
 import safeguardImg from "@/assets/work-safeguard-new.jpeg";
 import kgcShuttlesImg from "@/assets/work-kgcshuttles.webp";
+import kgcLogo from "@/assets/kgc-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Khomba Group of Companies — A Portfolio of Premium Brands" },
-      { name: "description", content: "Khomba Group of Companies is a portfolio of distinguished businesses built on craft, integrity, and excellence." },
-      { property: "og:title", content: "Khomba Group of Companies" },
+      { title: "KHOMBA Group of Companies — A Portfolio of Premium Brands" },
+      { name: "description", content: "KHOMBA Group of Companies is a portfolio of distinguished businesses built on craft, integrity, and excellence." },
+      { property: "og:title", content: "KHOMBA Group of Companies" },
       { property: "og:description", content: "A portfolio of premium brands and businesses." },
     ],
   }),
@@ -70,38 +71,30 @@ function HomePage() {
           </span>
         </div>
 
-        <div className="relative z-10 flex-1 w-full flex items-center justify-center px-2 sm:px-4">
-          <div className="text-center w-full">
-            <h1 className="font-serif font-medium leading-[0.85] tracking-[-0.03em] sm:tracking-[-0.04em] text-navy text-[20vw] sm:text-[18vw] md:text-[16vw] lg:text-[14rem] xl:text-[17rem] animate-float-up break-words">
-              Khomba<span className="text-gold">.</span>
-            </h1>
-            <div className="mt-3 sm:mt-4 flex items-center justify-center gap-2 sm:gap-4 animate-float-up-soft" style={{ animationDelay: "0.2s" }}>
-              <span className="h-px w-8 sm:w-16 bg-gold/60" />
-              <span className="text-[9px] sm:text-sm uppercase tracking-[0.3em] sm:tracking-[0.5em] text-navy/75 font-medium whitespace-nowrap">
-                Group of Companies
-              </span>
-              <span className="h-px w-8 sm:w-16 bg-gold/60" />
-            </div>
-            <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-sm sm:text-lg text-navy/70 leading-relaxed animate-float-up-soft font-serif italic px-2" style={{ animationDelay: "0.4s" }}>
-              A family legacy of distinguished houses — bound by name,
-              built on honour, and carried forward with pride.
-            </p>
-            <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 animate-float-up-soft" style={{ animationDelay: "0.6s" }}>
-              <Link
-                to="/work"
-                className="group inline-flex items-center gap-2 bg-navy text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm tracking-wide hover:bg-navy-deep transition-all"
-              >
-                Our Companies
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 border border-navy/25 text-navy px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm tracking-wide hover:border-gold hover:text-gold transition-colors"
-              >
-                Our Legacy
-              </Link>
-            </div>
-          </div>
+        <img
+          src={kgcLogo}
+          alt="Khomba Group of Companies"
+          className="mx-auto w-full max-w-[480px] sm:max-w-[560px] h-auto animate-float-up object-contain"
+          draggable={false}
+        />
+        <p className="mt-6 sm:mt-8 max-w-2xl mx-auto text-sm sm:text-lg text-navy/70 leading-relaxed animate-float-up-soft font-serif italic px-2" style={{ animationDelay: "0.4s" }}>
+          A family legacy of distinguished houses — bound by name,
+          built on honour, and carried forward with pride.
+        </p>
+        <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 animate-float-up-soft" style={{ animationDelay: "0.6s" }}>
+          <Link
+            to="/work"
+            className="group inline-flex items-center gap-2 bg-navy text-white px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm tracking-wide hover:bg-navy-deep transition-all"
+          >
+            Our Companies
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+          </Link>
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2 border border-navy/25 text-navy px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm tracking-wide hover:border-gold hover:text-gold transition-colors"
+          >
+            Our Legacy
+          </Link>
         </div>
 
         <div className="relative z-10 pb-8 sm:pb-10 flex items-center gap-2 text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-navy/50 animate-shimmer">
@@ -190,7 +183,7 @@ function HomePage() {
         <div className="relative mx-auto max-w-7xl">
           <span className="text-[10px] uppercase tracking-[0.35em] text-gold">Our Principles</span>
           <h2 className="mt-4 sm:mt-5 font-serif text-4xl sm:text-5xl md:text-7xl max-w-4xl leading-[1.05] sm:leading-[1.02]">
-            Every Khomba brand is built on
+            Every KHOMBA brand is built on
             the <span className="italic text-gold">same foundation.</span>
           </h2>
 

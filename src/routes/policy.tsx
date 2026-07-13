@@ -4,9 +4,9 @@ import { Shield, Scale, Lock, Ban, Handshake, FileText } from "lucide-react";
 export const Route = createFileRoute("/policy")({
   head: () => ({
     meta: [
-      { title: "Terms & Policies — Khomba Group of Companies" },
-      { name: "description", content: "The terms, code of conduct, and policies that protect the Khomba Group of Companies, its brands, staff, and clients." },
-      { property: "og:title", content: "Terms & Policies — Khomba Group" },
+      { title: "Terms & Policies — KHOMBA Group of Companies" },
+      { name: "description", content: "The terms, code of conduct, and policies that protect the KHOMBA Group of Companies, its brands, staff, and clients." },
+      { property: "og:title", content: "Terms & Policies — KHOMBA Group" },
       { property: "og:description", content: "Our code of conduct and legal terms." },
     ],
   }),
@@ -17,22 +17,22 @@ const sections = [
   {
     icon: Handshake,
     title: "01 — Code of Conduct",
-    body: `We do business with respect on both sides of the table. Clients, partners, staff, suppliers, and visitors are expected to conduct themselves with courtesy and honesty. Harassment, abuse, discrimination, or intimidation of any Khomba Group employee or contractor — in person, by phone, or in writing — is grounds for immediate termination of the engagement.`,
+    body: `We do business with respect on both sides of the table. Clients, partners, staff, suppliers, and visitors are expected to conduct themselves with courtesy and honesty. Harassment, abuse, discrimination, or intimidation of any KHOMBA Group employee or contractor — in person, by phone, or in writing — is grounds for immediate termination of the engagement.`,
   },
   {
     icon: Shield,
     title: "02 — Reputation & Defamation",
-    body: `False, malicious, or misleading statements made against the Khomba Group of Companies, any of its subsidiaries, staff, or affiliated brands — on any platform, public or private — will be treated seriously and, where warranted, pursued through legal counsel. Constructive feedback is always welcome; deliberate reputational harm is not.`,
+    body: `False, malicious, or misleading statements made against the KHOMBA Group of Companies, any of its subsidiaries, staff, or affiliated brands — on any platform, public or private — will be treated seriously and, where warranted, pursued through legal counsel. Constructive feedback is always welcome; deliberate reputational harm is not tolerated.`,
   },
   {
     icon: Scale,
     title: "03 — Fair Dealing & Payments",
-    body: `All engagements are governed by a written agreement between the client and the relevant Khomba Group entity. Deposits are non-refundable once work has commenced. Outstanding balances not settled within the agreed terms may be handed to collections and reported to relevant credit bureaus, without further notice.`,
+    body: `All engagements are governed by a written agreement between the client and the relevant KHOMBA Group entity. Deposits are non-refundable once work has commenced. Outstanding balances not settled within the agreed terms may be handed to collections and reported to relevant credit bureaus, without further notice.`,
   },
   {
     icon: Ban,
     title: "04 — Right of Refusal",
-    body: `The Khomba Group reserves the right to decline, suspend, or terminate any engagement — with or without cause — where it believes continuing would compromise the safety of its people, the integrity of its brands, or the interests of its other clients. Deposits paid for terminated engagements will be handled in line with the signed agreement.`,
+    body: `The KHOMBA Group reserves the right to decline, suspend, or terminate any engagement — with or without cause — where it believes continuing would compromise the safety of its people, the integrity of its brands, or the interests of its other clients. Deposits paid for terminated engagements will be handled in line with the signed agreement.`
   },
   {
     icon: Lock,
@@ -42,7 +42,7 @@ const sections = [
   {
     icon: FileText,
     title: "06 — Intellectual Property",
-    body: `All trademarks, logos, brand names, imagery, and written content on this website — including the Khomba Group name and identity, and those of its subsidiary companies — are the property of their respective owners. Reproduction, imitation, or use of any Khomba Group brand asset without prior written consent is prohibited.`,
+    body: `All trademarks, logos, brand names, imagery, and written content on this website — including the KHOMBA Group name and identity, and those of its subsidiary companies — are the property of their respective owners. Reproduction, imitation, or use of any KHOMBA Group brand asset without prior written consent is prohibited,`
   },
 ];
 
@@ -89,7 +89,7 @@ function PolicyPage() {
         <div className="mt-16 max-w-3xl mx-auto text-center border-t border-border pt-10">
           <p className="text-xs text-navy/55 leading-relaxed">
             These terms are provided in good faith and do not constitute legal advice.
-            The Khomba Group of Companies reserves the right to update this page at any time.
+            The KHOMBA Group of Companies reserves the right to update this page at any time.
             Continued engagement with the group or any of its subsidiaries constitutes
             acceptance of the terms in force at the time of engagement.
           </p>

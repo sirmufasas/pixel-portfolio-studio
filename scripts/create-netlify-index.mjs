@@ -21,8 +21,8 @@ await writeFile(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khomba Group of Companies</title>
-    <meta name="description" content="A portfolio of premium brands and businesses under the Khomba Group of Companies." />
+    <title>KHOMBA - Group of Companies</title>
+    <meta name="description" content="A portfolio of premium brands and businesses under the KHOMBA Group of Companies." />
     ${stylesheet ? `<link rel="stylesheet" href="/assets/${stylesheet}" />` : ""}
     <script type="module" crossorigin src="/assets/${appScript}"></script>
   </head>

@@ -7,9 +7,9 @@ import kgcShuttlesImg from "@/assets/work-kgcshuttles.webp";
 export const Route = createFileRoute("/work")({
   head: () => ({
     meta: [
-      { title: "Our Houses — Khomba Group of Companies" },
-      { name: "description", content: "The family of brands and businesses under the Khomba Group of Companies." },
-      { property: "og:title", content: "Our Houses — Khomba Group" },
+      { title: "Our Houses — KHOMBA Group of Companies" },
+      { name: "description", content: "The family of brands and businesses under the KHOMBA Group of Companies." },
+      { property: "og:title", content: "Our Houses — KHOMBA Group" },
       { property: "og:description", content: "A family of premium brands. Click through to visit each company." },
     ],
   }),
@@ -51,7 +51,7 @@ function WorkPage() {
           Our <span className="italic gradient-gold-text">Houses.</span>
         </h1>
         <p className="mt-8 mx-auto max-w-xl text-navy/70 leading-relaxed animate-float-up-soft font-serif italic px-4" style={{ animationDelay: "0.3s" }}>
-          Every house under the Khomba name is built with the same patience
+          Every house under the KHOMBA name is built with the same patience
           and standard. Step inside any of them.
         </p>
       </section>

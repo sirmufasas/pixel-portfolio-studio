@@ -44,9 +44,9 @@ export function SiteHeader() {
             alt="Khomba Group of Companies"
             className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover ring-1 ring-navy/15 group-hover:ring-gold transition-all shrink-0"
           />
-          <span className="font-serif text-lg sm:text-xl text-navy tracking-tight truncate">
+          {/* <span className="font-serif text-lg sm:text-xl text-navy tracking-tight truncate">
             Khomba<span className="text-gold">.</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop nav */}
@@ -112,7 +112,7 @@ export function SiteHeader() {
 
 export function WhatsAppFab() {
   const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Hello Khomba Group,"
+    "Hello KHOMBA Group, I would like to get in touch with you regarding your services."
   )}`;
   return (
     <a
@@ -136,7 +136,7 @@ export function SiteFooter() {
           <div className="flex items-center gap-3">
             <img src={logo} alt="KGC" className="h-12 w-12 rounded-full object-cover ring-1 ring-gold/40 shrink-0" />
             <div className="leading-tight min-w-0">
-              <div className="font-serif text-2xl">Khomba<span className="text-gold">.</span></div>
+              <div className="font-serif text-2xl">KHOMBA</div>
               <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60">Group of Companies</div>
             </div>
           </div>
@@ -166,7 +166,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-cream/10">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-cream/50">
-          <span>© {new Date().getFullYear()} Khomba Group of Companies. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} KHOMBA Group of Companies. All rights reserved.</span>
           <Link to="/policy" className="tracking-[0.25em] uppercase hover:text-gold transition-colors">
             Terms &amp; Policies
           </Link>

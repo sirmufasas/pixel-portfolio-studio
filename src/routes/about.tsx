@@ -5,9 +5,9 @@ import founderAsset from "@/assets/founder.jpeg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Khomba Group of Companies" },
-      { name: "description", content: "The story, vision, and principles behind the Khomba Group of Companies." },
-      { property: "og:title", content: "About — Khomba Group" },
+      { title: "About — KHOMBA Group of Companies" },
+      { name: "description", content: "The story, vision, and principles behind the KHOMBA Group of Companies." },
+      { property: "og:title", content: "About — KHOMBA Group" },
       { property: "og:description", content: "Built on craft, integrity, and a relentless standard of quality." },
       { property: "og:image", content: founderAsset },],
   }),
@@ -26,7 +26,7 @@ function AboutPage() {
           The <span className="italic gradient-gold-text">Group.</span>
         </h1>
         <p className="mt-8 mx-auto max-w-xl text-navy/65 leading-relaxed animate-float-up-soft px-4" style={{ animationDelay: "0.3s" }}>
-          Khomba Group of Companies is a portfolio of distinguished brands —
+          KHOMBA Group of Companies is a portfolio of distinguished brands —
           built on the simple belief that excellence is a discipline.
         </p>
       </section>
@@ -43,13 +43,13 @@ function AboutPage() {
               <div className="relative overflow-hidden rounded-3xl aspect-[4/5] bg-stone shadow-[0_40px_100px_-40px_rgba(20,30,80,0.4)]">
                 <img
                   src={founderAsset}
-                  alt="Founder & CEO of Khomba Group of Companies"
+                  alt="Founder & CEO of KHOMBA Group of Companies"
                   className="h-full w-full object-cover object-center transition-transform duration-[2s] ease-out group-hover:scale-[1.04]"
                 />
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy/40 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 text-cream">
                   <div className="text-[10px] tracking-[0.35em] uppercase text-gold">Founder &amp; CEO</div>
-                  {/* <div className="mt-1 font-serif text-2xl sm:text-3xl">Mr Benjamin Khomba</div> */}
+                  {/* <div className="mt-1 font-serif text-2xl sm:text-3xl">Mr BENJAMIN KHOMBA</div> */}
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ function AboutPage() {
             </h2>
             <div className="mt-6 space-y-5 text-navy/75 leading-relaxed">
               <p>
-                The Khomba Group began as one man's conviction — that a family
+                The KHOMBA Group began as one man's conviction — that a family
                 name, honoured and defended, is the most valuable asset a
                 business can hold.
               </p>
@@ -91,7 +91,7 @@ function AboutPage() {
               and a growing range of sectors.
             </p>
             <p className="text-navy/55">
-              Each company under the Khomba banner shares one philosophy:
+              Each company under the KHOMBA banner shares one philosophy:
               do meaningful work, treat people with respect, and never
               compromise on quality.
             </p>

@@ -9,9 +9,9 @@ const LOCATION = "South Africa";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Khomba Group of Companies" },
-      { name: "description", content: "Get in touch with the Khomba Group of Companies via WhatsApp, email, or phone." },
-      { property: "og:title", content: "Contact — Khomba Group" },
+      { title: "Contact — KHOMBA Group of Companies" },
+      { name: "description", content: "Get in touch with the KHOMBA Group of Companies via WhatsApp, email, or phone." },
+      { property: "og:title", content: "Contact — KHOMBA Group" },
       { property: "og:description", content: "Reach out to the family. WhatsApp, email, or phone." },
     ],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    "Hello Khomba Group, I'd like to get in touch."
+    "Hello KHOMBA Group, I'd like to get in touch."
   )}`;
 
   return (
